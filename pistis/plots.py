@@ -35,7 +35,7 @@ def gc_plot(gc_content):
     xlim = (0, 100) if any(x > 1 for x in gc_content) else (0, 1.0)
 
     fig, axes = plt.subplots(dpi=DPI, figsize=FIGURE_SIZE)
-    plot = sns.distplot(gc_content, bins=bins, ax=axes)
+    plot = sns.displot(gc_content, bins=bins, ax=axes)
     plot.set(xlabel=xlabel, ylabel=ylabel, title=title, xlim=xlim)
 
     # remove top and right border of plot
@@ -170,7 +170,7 @@ def percent_identity(perc_indentities):
     title = 'Read alignment percent identity'
 
     fig, axes = plt.subplots(dpi=DPI, figsize=FIGURE_SIZE)
-    plot = sns.distplot(perc_indentities, bins=bins, ax=axes)
+    plot = sns.displot(perc_indentities, bins=bins, ax=axes)
 
     # add a vertical dashed line at the median
     median = np.median(perc_indentities)
