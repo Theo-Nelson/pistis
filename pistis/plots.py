@@ -77,7 +77,7 @@ def length_vs_qual_plot(lengths, quality_scores, kind='scatter',
         if log_length:
             x_data = np.log10(x_data)
 
-        plot = sns.jointplot(x=x_data, y=y_data, kind=kind, space=0, size=3)
+        plot = sns.jointplot(x=x_data, y=y_data, kind=kind, space=0, height=3)
 
         # change the alpha of the scatter points
         if kind == 'scatter':
